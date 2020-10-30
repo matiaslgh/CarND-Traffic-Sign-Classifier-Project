@@ -110,20 +110,20 @@ I used Adam Optimizer to minimize the mean of the cross entropy between the pred
 
 These are the hyperparameters I used:
 
-learning rate = 0.001
-dropout (prob to keep) = 0.75
-epochs = 10
-batch size = 128
-weights initialization: truncated_normal with mu = 0 and sigma = 0.1
+* learning rate = 0.001
+* dropout (prob to keep) = 0.75
+* epochs = 10
+* batch size = 128
+* weights initialization: truncated_normal with mu = 0 and sigma = 0.1
 
 My results:
 
-validation set accuracy of 97.7%
-test set accuracy of 96.4%
+* validation set accuracy of 97.7%
+* test set accuracy of 96.4%
 
 #### 4. Solution approach
 
-These was my iterative process:
+This was my iterative process:
 
 1. I used orginal LeNet modifying the input to 32x32x**3** and I normalized the data by applying `(pixel - 128)/ 128` to every image. `Validation accuracy: 0.684`
 2. I improved the brightness and contrast because I noticed that some images were almost impossible to classify even by a human. `Validation accuracy: 0.717`
@@ -145,6 +145,7 @@ I wanted to know how well the model would behave with mockups, since I didn't us
 #### 2. Performance on New Images
 
 82 out of 104 images were well classified. That gives us: **`Accuracy = 0.788`**
+
 I'm really happy with this result as a first try and after the analysis shown below I have some ideas to increase this accuracy :)
 
 #### 3. Model Certainty - Softmax Probabilities
